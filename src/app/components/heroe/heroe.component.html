@@ -1,4 +1,5 @@
-<h1 class="animated fadeIn">{{ heroe.nombre }} <small> {{ heroe.aparicion }}</small></h1>
+<!-- las pipes se usan con | aqui se pasa a mayusculas y solo mostrar el año M-D-Y -->
+<h1 class="animated fadeIn">{{ heroe.nombre | uppercase }} <small> {{ heroe.aparicion | date:'y' }}</small></h1>
 <hr>
 
 <div class="row animated fadeIn fast">
@@ -18,8 +19,8 @@
       {{heroe.bio}}
     </p>
     <div>
-      <img *ngIf="heroe.casa=='Marvel'" class="img-logo" src="../../assets/img/marvelogo.png" alt="LogoMarvel">
-      <img *ngIf="heroe.casa=='DC'" class="img-logo" src="../../assets/img/dclogo.png" alt="LogoDC">
+      <img *ngIf="heroe.casa=='Marvel'" class="img-logo" src="assets/marvelogo.png" alt="LogoMarvel">
+      <img *ngIf="heroe.casa=='DC'" class="img-logo" src="assets/dclogo.png" alt="LogoDC">
     </div>
   </div>
 </div>
